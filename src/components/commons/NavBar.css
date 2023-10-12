@@ -1,0 +1,126 @@
+
+.active{
+  border-bottom: 3px solid #fff;
+}
+
+.global_nav{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 10svh;
+  padding: 0 5%;
+  z-index: 1000;
+}
+
+.navUl{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 118px;
+  padding-bottom: 377px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100svh;
+  width: 70vw;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: all .3s ease-in-out;
+}
+.logo, .menu_icon{
+  z-index: 99999;
+}
+.navUl a{
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #FFF;
+  font-family: 'Barlow' Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.7px;
+}
+.nav_h1{
+  color: #FFF;
+  font-family: 'Barlow' Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.7px;
+}
+
+@media only screen and (min-width:768px){
+
+  .menu_icon{
+    display: none;
+  }
+  .global_nav{
+    align-items: center;
+  }
+  .logo{
+    width: 48px;
+    height: 48px;
+    /* margin-top: 48px; */
+  }
+  .navUl{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 550px;
+    height: 96px;
+    
+    transform: scaleX(1);
+  }
+  .nav_h1{
+    display: none;
+  }
+  .navUl a{
+    font-size: 14px;
+    letter-spacing: 2.362px;
+    height: 96px;
+  }
+}
+@media only screen and (min-width:1028px){
+  .global_nav{
+    margin-top: 2rem;
+    height: 96px;
+  }
+  .nav_h1{
+    display: block;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .navUl{
+    width: 70vw;
+    padding-left: 8vw;
+    padding-right: 12vw;
+  }
+  .navUl a{
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .navUl::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20vw;
+    height: 1px;
+    margin-top: 48px;
+    margin-left: -25vw;
+    background-color: #FFF;
+    opacity: 0.25;
+  }
+}

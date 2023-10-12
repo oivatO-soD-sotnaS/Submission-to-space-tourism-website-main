@@ -1,10 +1,12 @@
-
-.hero_content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.home_link{
+  border: 3px solid #fff;
 }
 .hero{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 100vw;
   height: 100svh;
   background-image: url(../../public/home/background-home-mobile.jpg);
@@ -12,9 +14,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 15svh 5%;
-  color: #fff;
 }
-
+.hero_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .subtitle{
   color: #D0D6F9;
   text-align: center;
@@ -45,26 +51,77 @@
   line-height: 28px; /* 175% */
 }
 .explore_btn{
-  width: 50vw;
-  aspect-ratio: 1 / 1;
-  margin: 50px auto;
-  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   color: #0B0D17;
   text-align: center;
-  font-family: Bellefair;
+  font-family: 'Bellefair';
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.25px;
+  background-color: #FFF;
   transition: all .3s ease-in-out;
 }
+/* .explore_btn_text{
+  margin: 0 auto;
+} */
 .explore_btn:hover{
   -webkit-box-shadow: -5px 10px 25px 12px rgba(255,255,255,1);
   -moz-box-shadow: -5px 10px 25px 12px rgba(255,255,255,1);
   box-shadow: -5px 10px 25px 12px rgba(255,255,255,1);
+}
+@media only screen and (min-width:768px){
+  .hero{
+    padding: 20svh 5%;
+    background-image: url(../../public/home/background-home-tablet.jpg);
+  }
+  .subtitle{
+    font-size: 20px;
+    letter-spacing: 3.375px;
+  }
+  .title{
+    font-size: 150px;
+    line-height: 150px; /* 100% */
+  }
+  .text{
+    width: 444px;
+  }
+  .explore_btn{
+    width: 242px;
+    height: 242px;
+  }
+}
+@media only screen and (min-width:1028px){
+  .hero{
+    background-image: url(../../public/home/background-home-desktop.jpg);
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hero_content{
+    text-align: start;
+  }
+  .explore_btn{
+    width: 274px;
+    height: 274px;
+  }
+  .subtitle{
+    font-size: 20px;
+    letter-spacing: 4.725px;
+  }
+  .title{
+    font-size: 150px;
+    line-height: 150px; /* 100% */
+    padding: 24px 0;
+  }
+  .text{
+    font-size: 18px;
+    line-height: 32px; /* 177.778% */
+    text-align: justify;
+  }
 }
