@@ -1,10 +1,11 @@
-import React from 'react'
-import styles from './page.module.css'
+import { FC } from 'react'
 
-const Technology = () => {
-  return (
-    <div>Technology</div>
-  )
+interface pageProps {
+  
 }
 
-export default Technology
+const page: FC<pageProps> = ({}) => {
+  return <div>page</div>
+}
+
+export default page

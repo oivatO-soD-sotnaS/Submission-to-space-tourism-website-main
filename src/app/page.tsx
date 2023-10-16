@@ -13,7 +13,12 @@ export default function Home() {
           Well sit back, and relax because we’ll give you a truly out of this world experience!
         </p>
       </div>
-      <Link href='/Destination' className={styles.explore_btn}><p className={styles.explore_btn_text}>EXPLORE</p></Link> 
+      <Link 
+        href='/Destination' 
+        className={styles.explore_btn}
+      >
+        <p className={styles.explore_btn_text}>EXPLORE</p>
+      </Link> 
     </main>
     )
 }

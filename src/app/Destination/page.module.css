@@ -1,15 +1,19 @@
 .dest{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
   width: 100vw;
   height: 100svh;
   background-image: url(../../../public/destination/background-destination-mobile.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10svh 0px;
+  padding: 10svh 5%;
   /* overflow: hidden; */
 }
 
-.h1_span{
+.h1_pick_span{
   color: #FFF;
   font-family: 'Barlow' Condensed;
   font-size: 16px;
@@ -20,8 +24,7 @@
   opacity: 0.25;
 }
 
-.h1{
-  text-align: center;
+.h1_pick{
   color: #FFF;
   font-family: 'Barlow' Condensed;
   font-size: 16px;
@@ -31,12 +34,175 @@
   letter-spacing: 2.7px;
   text-transform: uppercase;
 }
-
-.dest_carousel{
+.dest_div_upper{
   display: flex;
-  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
+.dest_slider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   transition: all .3s ease-in-out;
 }
-.moon_btn:active ~ .dest_carousel{
-  transform: translateX(-25%);
+.dest_name{
+  color: #FFF;
+  text-align: center;
+  font-family: 'Bellefair';
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.dest_p{
+  width: 327px;
+  color: #D0D6F9;
+  text-align: center;
+  font-family: 'Barlow';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 166.667% */
+  margin-bottom: 32px;
+  transition: all .3s ease-in-out;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #383B4B;
+}
+.dest_info_h1{
+  margin: 0 auto 12px auto;
+  width: 216px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Bellefair';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.dest_h2{
+  margin: 0 auto 12px auto;
+  width: 216px;
+  color: #D0D6F9;
+  text-align: center;
+  font-family: 'Barlow' Condensed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.362px;
+  text-transform: uppercase;
+}
+.animation_div{
+  margin-top: 20px;
+  transition: all .4s ease-in;
+}
+.dest_img{
+  transition: all .4s ease-out;
+}
+@keyframes FadeOutTransition {
+  
+}
+@keyframes FadeInTransition {
+  
+}
+@media only screen and (min-width:700px){
+  .dest{
+    background-image: url(../../../public/destination/background-destination-tablet.jpg);
+    padding: 15svh 5% ;
+  }
+  .h1_pick{
+    width: 100%; 
+    font-size: 20px;
+    letter-spacing: 3.375px;
+  }
+  .h1_pick_span{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.375px;
+  }
+  .dest_img{
+    width: 350px;
+    height: 350px;
+  }
+  .dest_name{
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .dest_p{
+    width: 573px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+  }
+  .info_div{
+    display: flex;
+    justify-content: center;
+  }
+  .dest_h2{
+    font-size: 14px;
+    letter-spacing: 2.362px;
+  }
+  .dest_info_h1{
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width:1028px){
+  .dest{
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(../../../public/destination/background-destination-desktop.jpg);
+    padding: 15svh 5% ;
+  }
+  .dest_img{
+    width: 578px;
+    height: 578px;
+    flex-shrink: 0;
+  }
+  .dest_slider{
+    align-items: start;
+  }
+  .dest_div_upper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .dest_name,
+  .dest_p,
+  .dest_h2,
+  .dest_info_h1{
+    text-align: left;
+  }
+  .dest_name{
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .dest_p{
+    width: 444px;
+    padding-bottom: 54px;
+    font-size: 18px;
+    line-height: 32px; /* 177.778% */
+  }
+  .dest_h2{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+  }
+  .dest_info_h1{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
 }

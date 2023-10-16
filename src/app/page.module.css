@@ -76,7 +76,7 @@
   -moz-box-shadow: -5px 10px 25px 12px rgba(255,255,255,1);
   box-shadow: -5px 10px 25px 12px rgba(255,255,255,1);
 }
-@media only screen and (min-width:768px){
+@media only screen and (min-width:700px){
   .hero{
     padding: 20svh 5%;
     background-image: url(../../public/home/background-home-tablet.jpg);

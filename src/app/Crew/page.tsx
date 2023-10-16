@@ -1,10 +1,12 @@
-import React from 'react'
+import { FC } from 'react'
 import styles from './page.module.css'
 
-const Crew = () => {
-  return (
-    <div>Crew</div>
-  )
+interface pageProps {
+  
+}
+
+const Crew: FC<pageProps> = ({}) => {
+  return <div>page</div>
 }
 
 export default Crew
