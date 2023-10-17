@@ -60,11 +60,9 @@ const Destination: FC = () => {
   return (
     <section className={styles.dest}>
       <div className={styles.dest_div_upper}>
-        <h1 
-          className={styles.h1_pick} 
-        >
+        <h1 className={styles.h1_pick}>
           <span className={styles.h1_pick_span}>01</span> PICK YOUR DESTINATION
-          </h1>
+        </h1>
         <Image 
           src={info[item].img} 
           alt={info[item].alt} 

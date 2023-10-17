@@ -13,8 +13,6 @@ const DestNav: FC<IDestNavProps> = ({ imageRef, textRef, item, setItem }: IDestN
   const [activeButton, setActiveButton] = useState<number>(0);
   
   const clickHandler: (newItem: number) => void = (newItem: number) => {
-    
-
     const animationDirection = newItem > item ? "translateX(100px)" : "translateX(-100px)";
     setActiveButton(newItem)
     if (textRef.current !== null && imageRef.current !== null) {
@@ -30,7 +28,6 @@ const DestNav: FC<IDestNavProps> = ({ imageRef, textRef, item, setItem }: IDestN
         textRef.current.style.transform = "translateX(0px)"
       }
     }, 400)
-    
   }
 
 

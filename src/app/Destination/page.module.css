@@ -159,8 +159,8 @@
     padding: 15svh 5% ;
   }
   .dest_img{
-    width: 578px;
-    height: 578px;
+    width: 520px;
+    height: 520px;
     flex-shrink: 0;
   }
   .dest_slider{
