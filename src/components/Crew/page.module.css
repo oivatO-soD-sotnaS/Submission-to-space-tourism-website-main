@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   width: 88px;
   height: 10px;
   flex-shrink: 0;
 }
-.button{
+.button,
+.button_active{
   cursor: pointer;
   border: none;
   outline: none;
@@ -17,12 +19,16 @@
   opacity: 0.174363;
 }
 .button_active{
-  cursor: pointer;
-  border: none;
-  outline: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #fff;
   opacity: 1;
+}
+
+@media only screen and (min-width:1028px){
+  .crew_nav{
+    margin: 0;
+  }
+  .button,
+  .button_active{
+    width: 15px;
+    height: 15px;
+  }
 }

@@ -13,7 +13,7 @@ const DestNav: FC<IDestNavProps> = ({ imageRef, textRef, item, setItem }: IDestN
   const [activeButton, setActiveButton] = useState<number>(0);
   
   const clickHandler: (newItem: number) => void = (newItem: number) => {
-    const animationDirection = newItem > item ? "translateX(100px)" : "translateX(-100px)";
+    const animationDirection = newItem > item ? "translateX(100%)" : "translateX(-100%)";
     setActiveButton(newItem)
     if (textRef.current !== null && imageRef.current !== null) {
       imageRef.current.style.opacity = "0"
@@ -25,7 +25,7 @@ const DestNav: FC<IDestNavProps> = ({ imageRef, textRef, item, setItem }: IDestN
       if (textRef.current !== null && imageRef.current !== null) {
         imageRef.current.style.opacity = "1"
         textRef.current.style.opacity = "1";
-        textRef.current.style.transform = "translateX(0px)"
+        textRef.current.style.transform = "translateX(0%)"
       }
     }, 400)
   }

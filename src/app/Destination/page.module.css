@@ -178,6 +178,21 @@
   .dest_info_h1{
     text-align: left;
   }
+  .h1_pick_span{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.725px;
+  }
+  .h1_pick{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+  }
   .dest_name{
     font-size: 100px;
     font-style: normal;

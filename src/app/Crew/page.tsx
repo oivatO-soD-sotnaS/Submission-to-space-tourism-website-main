@@ -15,7 +15,10 @@ interface ICrewInfo {
   h1: string;
   p: string;
 }
-
+interface IImagesDimensions {
+  imgWidth: number;
+  imgHeight: number;
+}
 const CrewInfo: Array<ICrewInfo> = [
   {
     img: "/crew/image-douglas-hurley.png",
@@ -60,6 +63,9 @@ interface pageProps {
 }
 
 const Crew: FC<pageProps> = ({}) => {
+  const [imageWidth, setImageWidth] = useState<number>(178);
+  const [imageHeight, setImageHeight] = useState<number>(222);
+
   const imageRef = useRef<HTMLImageElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
   const [item, setItem] = useState<number>(0);
@@ -68,20 +74,27 @@ const Crew: FC<pageProps> = ({}) => {
       <h1 className={styles.crew_h1}>
         <span className={styles.crew_h1_span}>02</span>MEET YOUR CREW
       </h1>
-      <Image 
-        src={CrewInfo[item].img} 
-        alt={CrewInfo[item].alt} 
-        width={CrewInfo[item].imgWidth}
-        height={CrewInfo[item].imgHeight}
-        ref={imageRef}
-        className={styles.crew_img}
-      />
-      <span className={styles.img_line}></span>
-      <CrewNav  item={item} setItem={setItem} infoRef={infoRef} imageRef={imageRef}/>
-      <div className={styles.crew_info} ref={infoRef}>
-        <h2 className={styles.info_h2}>{CrewInfo[item].h2}</h2>
-        <h1 className={styles.info_h1}>{CrewInfo[item].h1}</h1>
-        <p className={styles.info_p}>{CrewInfo[item].p}</p>
+      <div className={styles.crew_content_wrapper}>
+        <Image
+          src={CrewInfo[item].img}
+          alt={CrewInfo[item].alt}
+          width={imageWidth}
+          height={imageHeight}
+          ref={imageRef}
+          className={styles.crew_img}
+          draggable={false}
+        />
+        <span className={styles.img_line}></span>
+        <div className={styles.nav_content_wrapper}>
+          <CrewNav  item={item} infoRef={infoRef} imageRef={imageRef}
+            setItem={setItem}
+            />
+          <div className={styles.crew_info} ref={infoRef}>
+            <h2 className={styles.info_h2}>{CrewInfo[item].h2}</h2>
+            <h1 className={styles.info_h1}>{CrewInfo[item].h1}</h1>
+            <p className={styles.info_p}>{CrewInfo[item].p}</p>
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -70,6 +70,7 @@ const Destination: FC = () => {
           height={200} 
           className={styles.dest_img} 
           ref={imageRef}
+          draggable={false}
         />
       </div>
       <section className={styles.dest_slider} >

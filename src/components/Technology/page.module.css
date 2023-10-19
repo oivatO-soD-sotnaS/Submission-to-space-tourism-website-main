@@ -1,0 +1,50 @@
+.tech_nav{
+  display: flex;
+  gap: 16px;
+  margin-top: 9px;
+}
+
+.button,
+.active_button{
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #FFF;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #0B0D17;
+  text-align: center;
+  font-family: 'Bellefair';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  transition: all .4s ease-in-out;
+}
+.button{
+  color: #FFF;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, .25);
+}
+@media only screen and (min-width:700px){
+  .button,
+  .active_button{
+    width: 60px;
+    height: 60px;
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+}
+@media only screen and (min-width:1028px){
+  .button,
+  .active_button{
+    width: 80px;
+    height: 80px;
+  }
+  .tech_nav{
+    flex-direction: column;
+  }
+}

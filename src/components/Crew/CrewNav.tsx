@@ -1,5 +1,5 @@
 "use client"
-import React, { FC, useState } from 'react'
+import React, { FC, useRef, useState } from 'react'
 import styles from "./page.module.css"
 
 
@@ -12,13 +12,21 @@ interface CrewNavProps {
 
 const CrewNav: FC<CrewNavProps> = ({ infoRef, imageRef, item, setItem}: CrewNavProps) => {
   const [activeButton, setActiveButton] = useState<number>(0);
-  const clickHandler: (current:number) => void = (current:number) => {
-    
-    setActiveButton(current)
+  const clickHandler: (newItem:number) => void = (newItem:number) => {
+    if(imageRef.current && infoRef.current){
+      imageRef.current.style.opacity = "0";
+      infoRef.current.style.transform = "scaleX(-0.1)";
+      infoRef.current.style.opacity = "0";
+    }
+    setActiveButton(newItem)
     setTimeout(() => {
-      setItem(current)
-      
-    }, 400)
+      setItem(newItem)
+      if(imageRef.current  && infoRef.current){
+        imageRef.current.style.opacity = "1";
+        infoRef.current.style.transform = "scaleX(1)"
+        infoRef.current.style.opacity = "1";
+      }
+    }, 450)
   }
 
   return (

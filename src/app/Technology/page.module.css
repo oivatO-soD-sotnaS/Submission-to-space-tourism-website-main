@@ -1,0 +1,182 @@
+.technology{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100svh;
+  background-image: url(../../../public/technology/background-technology-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 15svh 5%;
+}
+.tech_h1_span{
+  color: #FFF;
+  font-family: 'Barlow' Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.7px;
+  opacity: 0.25;
+}
+
+.tech_h1{
+  color: #FFF;
+  font-family: 'Barlow' Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.tech_img{
+  width: 100vw;
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.tech_content,
+.tech_img{
+  transition: all .4s ease-in-out;
+  transform-origin: left;
+}
+.tech_h2{
+  color: #D0D6F9;
+  text-align: center;
+  font-family: 'Barlow' Condensed;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.362px;
+  margin-top: 26px;
+}
+.tech_h1_info{
+  color: #FFF;
+  text-align: center;
+  font-family: 'Bellefair';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-top: 9px;
+  padding-bottom: 16px;
+}
+.tech_p{
+  width: 327px;
+  color: #D0D6F9;
+  text-align: center;
+  font-family: 'Barlow';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 166.667% */
+}
+@media only screen and (min-width:700px){
+  .technology{
+    background-image: url(../../../public/technology/background-technology-tablet.jpg);
+  }
+  .tech_h1_span{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.375px;
+  }
+  .tech_h1{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.375px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 44px;
+  }
+  .tech_h2{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+  }
+  .tech_h1_info{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 16px 0;
+  }
+  .tech_p{
+    width: 458px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+  }
+}
+@media only screen and (min-width:1028px){
+  .technology{
+    background-image: url(../../../public/technology/background-technology-desktop.jpg);
+  }
+  .major_container{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 100svh;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .minor_container{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-left: 5vw;
+  }
+  .tech_h1_span{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.725px;
+  }
+  .tech_h1{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+  }
+  .tech_img{
+    width: 550px;
+    height: 650px;
+    flex-shrink: 0;
+  }
+  .tech_h2{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    text-align: left;
+  }
+  .tech_h1_info{
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+  }
+  .tech_p{
+    width: 444px;   
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+    text-align: left;
+  }
+}
