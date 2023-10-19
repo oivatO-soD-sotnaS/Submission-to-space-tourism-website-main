@@ -1,4 +1,4 @@
-import React, { FC, useState, useRef } from 'react'
+import React, { FC, useState, useRef, useEffect } from 'react'
 import styles from "./page.module.css"
 
 interface TechNavProps {
@@ -9,9 +9,8 @@ interface TechNavProps {
 }
 
 const TechNav: FC<TechNavProps> = ({ setItem, setImageOrientation, contentDivRef, imgRef }:TechNavProps) => {
-  const pageWidth = useRef<number>(window.innerWidth);
   const [currentButton, setCurrentButton] = useState<number>(0);
-  if(pageWidth.current > 1028) setImageOrientation(1);
+  
   const handleClick: (newItem:number) => void = (newItem:number) => {
     const transformOrigin = currentButton > newItem ? "left":"right";
     setCurrentButton(newItem);
